@@ -10,7 +10,14 @@ function ListGroup() {
       {/* This is how to dynamically use an array in jsx */}
       {list.map((item) => (
         // keys allow for elements to be uniquely identified
-        <li key={item}> {item}</li>
+        <li
+          className="list-group-item"
+          key={item}
+          onClick={() => console.log("clicked.")}
+        >
+          {" "}
+          {item}
+        </li>
       ))}
     </>
   );
