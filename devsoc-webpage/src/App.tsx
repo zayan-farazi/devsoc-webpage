@@ -1,3 +1,4 @@
+// import { useState } from "react";
 import BottomHalf from "./components/BottomHalf";
 import ListGroup from "./components/ListGroup";
 import Message from "./components/Message";
@@ -5,6 +6,9 @@ import SwapButton from "./components/SwapButton";
 import TopHalf from "./components/TopHalf";
 
 function App() {
+  // let [isInverted, setIsInverted] = useState(false);
+  // essentially, when button is clicked, the two halves should swap, thus re-rendering
+
   return (
     <>
       <TopHalf>
