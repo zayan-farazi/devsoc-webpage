@@ -1,11 +1,14 @@
 import ListGroup from "./components/ListGroup";
+import TopHalf from "./components/topHalf";
 
 function App() {
   return (
-    <div>
-      <ListGroup></ListGroup>
-    </div>
-  );
+    <>
+      <TopHalf>
+        <ListGroup></ListGroup>
+      </TopHalf>
+    </>
+  )
 }
 
 export default App;
