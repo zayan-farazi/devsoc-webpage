@@ -1,9 +1,26 @@
-Keeping this up as a progress check:
+# “Opposites Attract” webpage checklist
 
-Phase 1: - Create component for text - Manage state (learn about this) - define the interface for components - use references (should help with opposites attract theme)
+## Phase 1: basic components
 
-Phase 2: - build the two half layout - use div blocks + bootstrap - customise colour palette
+- [x] create a component for displaying text
+- [ ] learn and implement state management with `useState`
+- [x] define TypeScript interfaces for component props
+- [ ] use `useRef` to capture DOM elements (for “opposites attract” interactions)
 
-Phase 3: - rotate bottom half of page - implement reverse scrolling
+## Phase 2: layout + styling
 
-Phase 4: - add a toggle button - reorder halves on toggle - apply colour inversion
+- [ ] build two-half layout using `<div>` blocks
+- [ ] integrate Bootstrap utilities for grid and spacing
+- [ ] customize a color palette (could use css)
+
+## Phase 3: flipping & reverse-scrolling
+
+- [ ] rotate the bottom half of the page with CSS `transform: rotate(180deg)`
+- [ ] wrap bottom-half content in a child `<div>` and rotate back
+- [ ] implement reverse scrolling on the bottom half using a wheel event handler
+
+## Phase 4: toggle & inversion
+
+- [ ] add a “Flip & Invert” toggle button component
+- [ ] reorder the two halves conditionally based on toggle state
+- [ ] apply color inversion with css `filter: invert(1) hue-rotate(180deg)`
