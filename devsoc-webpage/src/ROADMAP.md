@@ -3,7 +3,7 @@
 ## Phase 1: basic components
 
 - [x] create a component for displaying text
-- [ ] learn and implement state management with `useState`
+- [x] learn and implement state management with `useState`
 - [x] define TypeScript interfaces for component props
 - [ ] use `useRef` to capture DOM elements (for “opposites attract” interactions)
 
