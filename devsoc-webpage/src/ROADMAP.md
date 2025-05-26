@@ -9,7 +9,7 @@
 
 ## Phase 2: layout + styling
 
-- [ ] build two-half layout using `<div>` blocks
+- [x] build two-half layout using `<div>` blocks
 - [ ] integrate Bootstrap utilities for grid and spacing
 - [ ] customize a color palette (could use css)
 

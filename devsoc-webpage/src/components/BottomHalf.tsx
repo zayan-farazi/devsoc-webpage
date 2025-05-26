@@ -5,7 +5,14 @@ interface BottomHalfProps {
 }
 
 function BottomHalf({ children }: BottomHalfProps) {
-  return <>{children}</>;
+  return (
+    <>
+      {/* used div blocks to section out the two halves */}
+      <div className="half" id="BottomHalf">
+        {children}
+      </div>
+    </>
+  );
 }
 
 export default BottomHalf;

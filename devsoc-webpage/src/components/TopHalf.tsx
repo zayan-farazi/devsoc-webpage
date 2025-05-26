@@ -9,6 +9,7 @@ function TopHalf({ children }: TopHalfProps) {
   //    and using them in App.tsx within <TopHalf><TopHalf>)
   return (
     <>
+      {/* sectioned out top half */}
       <div className="half" id="TopHalf">
         {children}
       </div>
