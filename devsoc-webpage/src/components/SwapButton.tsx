@@ -1,12 +1,19 @@
-function SwapButton() {
+import type React from "react";
+
+interface SwapButtonProps {
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  children: React.ReactNode;
+}
+
+function SwapButton({ onClick, children }: SwapButtonProps) {
   return (
     <button
       type="button"
       className="btn btn-primary btn-lg"
-      // onClick requires a function to run when clicked, in this case we used an empty lambda that prints swap triggered
-      onClick={() => console.log("Swap Triggered")}
+      // changed functionality to setup swapping halves when clicked.
+      onClick={onClick}
     >
-      Click me please!
+      {children}
     </button>
   );
 }
