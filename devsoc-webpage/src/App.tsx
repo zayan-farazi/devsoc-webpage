@@ -4,6 +4,7 @@ import BottomHalf from "./components/BottomHalf";
 import SwapButton from "./components/SwapButton";
 import TopHalf from "./components/TopHalf";
 import TopHalfMessage from "./components/TopHalfMessage";
+import BottomHalfMessage from "./components/BottomHalfMessage";
 
 function App() {
   let [isInverted, setIsInverted] = useState(false);
@@ -19,7 +20,7 @@ function App() {
               {isInverted ? (
                 <>
                   <BottomHalf>
-                    <p>placeholder!</p>
+                    <BottomHalfMessage></BottomHalfMessage>
                   </BottomHalf>
                   <TopHalf>
                     <TopHalfMessage></TopHalfMessage>
@@ -31,7 +32,7 @@ function App() {
                     <TopHalfMessage></TopHalfMessage>
                   </TopHalf>
                   <BottomHalf>
-                    <p>placeholder!</p>
+                    <BottomHalfMessage></BottomHalfMessage>
                   </BottomHalf>
                 </>
               )}
