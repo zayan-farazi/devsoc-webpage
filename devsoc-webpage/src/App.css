@@ -2,3 +2,8 @@
   height: 50vh;
   overflow: auto;
 }
+
+.inverted {
+  filter: invert(1) hue-rotate(180deg);
+  transition: filter 1s;
+}
