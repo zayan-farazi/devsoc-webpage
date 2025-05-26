@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import BottomHalf from "./components/BottomHalf";
 import SwapButton from "./components/SwapButton";
 import TopHalf from "./components/TopHalf";
@@ -7,8 +7,19 @@ import TopHalfMessage from "./components/TopHalfMessage";
 import BottomHalfMessage from "./components/BottomHalfMessage";
 
 function App() {
-  let [isInverted, setIsInverted] = useState(false);
   // essentially, when button is clicked, the two halves should swap, thus re-rendering
+  let [isInverted, setIsInverted] = useState(false);
+
+  // created a reference for the bottom half
+  const bottomRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseScroll = (e: React.WheelEvent<HTMLDivElement>) => {
+    e.preventDefault()
+    if (bottomRef.current) {
+      bottomRef.current.scrollTop -= e.deltaY;
+    }
+  }
+
 
   return (
     <>
@@ -19,7 +30,10 @@ function App() {
               {/* this renders the page according to whether the page is flipped or not */}
               {isInverted ? (
                 <>
-                  <BottomHalf>
+                  <BottomHalf
+                    ref = {bottomRef}
+                    onWheel={handleMouseScroll}
+                  >
                     <BottomHalfMessage></BottomHalfMessage>
                   </BottomHalf>
                   <TopHalf>

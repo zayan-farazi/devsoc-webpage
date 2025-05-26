@@ -5,12 +5,12 @@
 - [x] create a component for displaying text
 - [x] learn and implement state management with `useState`
 - [x] define TypeScript interfaces for component props
-- [ ] use `useRef` to capture DOM elements (for “opposites attract” interactions)
+- [X] use `useRef` to capture DOM elements (for “opposites attract” interactions)
 
 ## Phase 2: layout + styling
 
 - [x] build two-half layout using `<div>` blocks
-- [ ] integrate Bootstrap utilities for grid and spacing
+- [x] integrate Bootstrap utilities for grid and spacing
 - [ ] customize a color palette (could use css)
 
 ## Phase 3: flipping & reverse-scrolling

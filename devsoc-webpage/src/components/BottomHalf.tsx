@@ -1,18 +1,19 @@
 import type React from "react";
+import { forwardRef } from "react";
 
 interface BottomHalfProps {
   children: React.ReactNode;
+  onWheel?: React.WheelEventHandler<HTMLDivElement>;
 }
 
-function BottomHalf({ children }: BottomHalfProps) {
-  return (
-    <>
-      {/* used div blocks to section out the two halves */}
-      <div className="half" id="BottomHalf">
-        {children}
-      </div>
-    </>
-  );
-}
+const BottomHalf = forwardRef<HTMLDivElement, BottomHalfProps>(
+  ({ children, onWheel }, ref) => (
+    <div ref={ref} className="half" id="bottom-half" onWheel={onWheel}>
+      {children}
+    </div>
+  )
+);
+
+BottomHalf.displayName = "BottomHalf";
 
 export default BottomHalf;
