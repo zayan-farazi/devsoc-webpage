@@ -1,9 +1,9 @@
 // import { useState } from "react";
 import { useState } from "react";
 import BottomHalf from "./components/BottomHalf";
-import Message from "./components/Message";
 import SwapButton from "./components/SwapButton";
 import TopHalf from "./components/TopHalf";
+import TopHalfMessage from "./components/TopHalfMessage";
 
 function App() {
   let [isInverted, setIsInverted] = useState(false);
@@ -19,19 +19,19 @@ function App() {
               {isInverted ? (
                 <>
                   <BottomHalf>
-                    <Message></Message>
+                    <p>placeholder!</p>
                   </BottomHalf>
                   <TopHalf>
-                    <Message></Message>
+                    <TopHalfMessage></TopHalfMessage>
                   </TopHalf>
                 </>
               ) : (
                 <>
                   <TopHalf>
-                    <Message></Message>
+                    <TopHalfMessage></TopHalfMessage>
                   </TopHalf>
                   <BottomHalf>
-                    <Message></Message>
+                    <p>placeholder!</p>
                   </BottomHalf>
                 </>
               )}
