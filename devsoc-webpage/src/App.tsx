@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import "./App.css";
 import { useRef, useState } from "react";
 import BottomHalf from "./components/BottomHalf";
 import SwapButton from "./components/SwapButton";
@@ -14,12 +14,11 @@ function App() {
   const bottomRef = useRef<HTMLDivElement>(null);
 
   const handleMouseScroll = (e: React.WheelEvent<HTMLDivElement>) => {
-    e.preventDefault()
+    e.preventDefault();
     if (bottomRef.current) {
       bottomRef.current.scrollTop -= e.deltaY;
     }
-  }
-
+  };
 
   return (
     <>
@@ -30,10 +29,7 @@ function App() {
               {/* this renders the page according to whether the page is flipped or not */}
               {isInverted ? (
                 <>
-                  <BottomHalf
-                    ref = {bottomRef}
-                    onWheel={handleMouseScroll}
-                  >
+                  <BottomHalf ref={bottomRef} onWheel={handleMouseScroll}>
                     <BottomHalfMessage></BottomHalfMessage>
                   </BottomHalf>
                   <TopHalf>

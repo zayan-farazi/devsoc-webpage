@@ -11,7 +11,7 @@
 
 - [x] build two-half layout using `<div>` blocks
 - [x] integrate Bootstrap utilities for grid and spacing
-- [ ] customize a color palette (could use css)
+- [X] customize a color palette (could use css)
 
 ## Phase 3: flipping & reverse-scrolling
 

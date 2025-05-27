@@ -10,7 +10,7 @@ function TopHalf({ children }: TopHalfProps) {
   return (
     <>
       {/* sectioned out top half */}
-      <div className="half" id="TopHalf">
+      <div className="half" id="top-half">
         {children}
       </div>
     </>

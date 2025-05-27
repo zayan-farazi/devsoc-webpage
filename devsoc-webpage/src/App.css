@@ -3,11 +3,6 @@
   overflow: auto;
 }
 
-.inverted {
-  filter: invert(1) hue-rotate(180deg);
-  transition: filter 1s;
-}
-
 :root {
   /* top half colouors */
   --top-bg: #fe7b7b;
@@ -18,4 +13,34 @@
   --bottom-bg: #003b46;
   --bottom-fg: #00f0ff;
   --bottom-accent: #007acc;
+}
+
+.inverted {
+  /* swap top ↔ bottom values */
+  --top-bg: #003b46;
+  --top-fg: #00f0ff;
+  --top-accent: #007acc;
+
+  --bottom-bg: #fe7b7b;
+  --bottom-fg: #5c0000;
+  --bottom-accent: #ab333e;
+}
+
+#top-half {
+  background-color: var(--top-bg);
+  color: var(--top-fg);
+}
+
+#bottom-half {
+  background-color: var(--bottom-bg);
+  color: var(--bottom-fg);
+}
+
+.swap-btn {
+  background-color: var(--top-accent);
+  border-color: var(--top-accent);
+  color: #fff;
+}
+.swap-btn:hover {
+  opacity: 0.9;
 }
