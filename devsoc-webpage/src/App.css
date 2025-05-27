@@ -7,3 +7,15 @@
   filter: invert(1) hue-rotate(180deg);
   transition: filter 1s;
 }
+
+:root {
+  /* top half colouors */
+  --top-bg: #fe7b7b;
+  --top-fg: #5c0000;
+  --top-accent: #ab333e;
+
+  /* bottom half colours */
+  --bottom-bg: #003b46;
+  --bottom-fg: #00f0ff;
+  --bottom-accent: #007acc;
+}
