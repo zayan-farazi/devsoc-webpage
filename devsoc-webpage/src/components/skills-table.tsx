@@ -17,3 +17,11 @@ const flippedSkills = [
   { skill: "Grinding RPGs", level: 90 },
   { skill: "Watching Indian men on YouTube coding", level: 78 },
 ];
+
+export function SkilsSection() {
+  //   isFlipped needs to be revamped, but skills should show flippedSkills if isFlipped is true, else show normal skills.
+  let isFlipped;
+  const skills = isFlipped ? flippedSkills : normalSkills;
+
+  return {};
+}
