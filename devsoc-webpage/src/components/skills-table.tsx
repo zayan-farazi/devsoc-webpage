@@ -1,3 +1,5 @@
+import { useSwap } from "../SwapContext";
+
 // creating arrays for tables almost souls-like meters
 const normalSkills = [
   { skill: "Cooking", level: 95 },
@@ -20,7 +22,7 @@ const flippedSkills = [
 
 export function SkilsSection() {
   //   isFlipped needs to be revamped, but skills should show flippedSkills if isFlipped is true, else show normal skills.
-  let isFlipped;
+  const { isFlipped } = useSwap();
   const skills = isFlipped ? flippedSkills : normalSkills;
 
   return (
