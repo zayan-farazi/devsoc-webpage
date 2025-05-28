@@ -23,5 +23,15 @@ export function SkilsSection() {
   let isFlipped;
   const skills = isFlipped ? flippedSkills : normalSkills;
 
-  return {};
+  return (
+    <section
+      // transitions come from tailwind, easier than doing it myself
+      className="py-20 px-8 transition-all duration-1000"
+      style={{
+        // this should flip & invert colours the table when isFlipped is true
+        transform: isFlipped ? "scaleY(-1)" : "scaleY(1)",
+        filter: isFlipped ? "invert(1) hue-rotate(180deg)" : "none",
+      }}
+    ></section>
+  );
 }
