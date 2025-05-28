@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    // … any existing settings …
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
       "@/components/*": ["src/components/*"]
-    }
+    },
+    "types": ["styled-jsx"]
   },
   "files": [],
   "references": [
