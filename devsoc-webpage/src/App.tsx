@@ -12,7 +12,6 @@ export default function App() {
       <SkillsSection></SkillsSection>
       <IntroSection></IntroSection>
       <AboutSection></AboutSection>
-
       <ExperiencesSection></ExperiencesSection>
       <ConnectSection></ConnectSection>
     </div>
