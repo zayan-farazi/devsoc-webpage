@@ -37,14 +37,13 @@ export default function ConnectSection() {
       <h2 className="connect-title">The End...?</h2>
 
       <div className="connect-row">
-        {/* Left: Info Card */}
         <div className="connect-info">
-          <div className="connect-card">
+          <div className="connect-card text-box">
             <h3>Take me as a trainee please 🙏🏾</h3>
             <p>
               Genuinely, this was such a pain to come up with no experience
               whatsoever, that being said even if this application is
-              unsuccessful, thank you for the opportunity to get me to out of my
+              unsuccessful, thank you for the opportunity to get me out of my
               comfort zone and try a front-end project (even if it's small).
             </p>
 
@@ -58,21 +57,17 @@ export default function ConnectSection() {
                 </li>
               ))}
             </ul>
-
-            <div className="connect-actions">
-              <button className="btn solid">
-                <Mail size={16} /> Send Message
-              </button>
-              <button className="btn outline">
-                <Camera size={16} /> View Portfolio
-              </button>
-            </div>
           </div>
         </div>
 
-        {/* Right: Placeholder Image */}
         <div className="connect-image">
-          <div className="image-placeholder" />
+          <div className="image-placeholder">
+            <img
+              src="/photos/eepy.jpeg"
+              alt="more cat"
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </div>
         </div>
       </div>
     </section>

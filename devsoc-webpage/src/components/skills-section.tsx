@@ -19,7 +19,7 @@ const SkillsSection = ({ swapped }: SkillsSectionProps) => {
         setIsVisible(rect.top < window.innerHeight && rect.bottom > 0);
       }
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -51,7 +51,7 @@ const SkillsSection = ({ swapped }: SkillsSectionProps) => {
           style={{ transform: `translateY(${scrollY * 0.05}px)` }}
         >
           <div className="skills-content">
-            <h3>{swapped ? "My Actual Skills…" : "My Skills & Talents!"}</h3>
+            <h3>{swapped ? "My Other Skills…" : "My Skills & Talents!"}</h3>
             <div className="skills-grid">
               {skillsToShow.map((skill, index) => (
                 <div key={skill.skill} className="skill-item text-box">
@@ -82,6 +82,10 @@ const SkillsSection = ({ swapped }: SkillsSectionProps) => {
         >
           <div className="image-area">
             <div className="image-placeholder">
+              <img
+                src={swapped ? "/photos/catmad.jpeg" : "/photos/catselfie.jpeg"}
+                alt="Skills placeholder"
+              />
               <div className="monitor-icon">
                 <Monitor size={24} />
               </div>

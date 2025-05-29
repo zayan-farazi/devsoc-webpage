@@ -23,13 +23,6 @@ export default function IntroSection() {
           style={{ transform: `translateY(${scrollY * 0.1}px)` }}
         >
           <div className="about-section">
-            <div className="profile-image">
-              <img
-                src="/placeholder.svg?height=200&width=200"
-                alt="Profile"
-                className="avatar"
-              />
-            </div>
             <div className="content text-box">
               <div className="intro-text">
                 <h2>Hey there, I'm Zayan!</h2>

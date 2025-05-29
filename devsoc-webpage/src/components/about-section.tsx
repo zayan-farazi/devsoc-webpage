@@ -13,7 +13,6 @@ export default function AboutSection({ swapped }: AboutSectionProps) {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -32,9 +31,9 @@ export default function AboutSection({ swapped }: AboutSectionProps) {
                   <h2>My Story</h2>
                   <p>
                     <span className="highlight">
-                      I'm a passionate second-year software engineering student
+                      I’m a passionate second-year software engineering student
                       with ample experience with C/C++, JS/TS and Python. When
-                      I'm not coding, you'll find me on a cricket field, keeping
+                      I’m not coding, you’ll find me on a cricket field, keeping
                       behind the stumps or on the football pitch, sending it top
                       corner.
                     </span>
@@ -57,18 +56,18 @@ export default function AboutSection({ swapped }: AboutSectionProps) {
             {swapped && (
               <>
                 <div className="story-section text-box">
-                  <h2>The real me?</h2>
+                  <h2>The Real Me?</h2>
                   <p>
-                    I'm a serial binge watcher, managing to binge an entire
-                    K-Drama while coding up this project. I might not be able to
-                    watch my lectures on time but Saturday 2am, I'm already on
-                    HiAnime watching the latest releases.
+                    I’m a serial binge watcher, managing to binge an entire
+                    K-Drama while coding up this project. I might skip my
+                    lectures on time but Saturday at 2 am, I’m on HiAnime
+                    watching the latest releases.
                   </p>
                 </div>
                 <div className="philosophy-section text-box">
                   <h2>Quote of the Day</h2>
                   <blockquote>
-                    "The art of living happily is to live in the present" -
+                    "The art of living happily is to live in the present" -{" "}
                     Pythagoras
                   </blockquote>
                 </div>
@@ -85,6 +84,12 @@ export default function AboutSection({ swapped }: AboutSectionProps) {
         >
           <div className="image-area">
             <div className="image-placeholder">
+              <img
+                src={
+                  swapped ? "/photos/sleep.jpeg" : "/photos/IMG_2231%20(1).jpeg"
+                }
+                alt="Selfies"
+              />
               <div className="camera-icon">
                 <Camera size={24} />
               </div>
