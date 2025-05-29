@@ -2,7 +2,6 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/devsoc-webpage/',   // ← add this line
+  base: '/devsoc-webpage/',  
   plugins: [react()],
-  // ...any other config you already have...
 })
