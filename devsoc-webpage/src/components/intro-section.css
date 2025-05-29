@@ -2,15 +2,15 @@
 
 .intro-container {
   display: flex;
-  min-height: 100vh;              /* fill viewport */
+  min-height: 100vh;              
   margin-bottom: 2rem;
 }
 
 .intro-container .intro-half {
-  flex: 1;                        /* take up half the width */
+  flex: 1;                        
   display: flex;
-  align-items: center;            /* vertical center */
-  justify-content: center;        /* horizontal center */
+  align-items: center;            
+  justify-content: center;        
   padding: 2rem 3rem;
   background: var(--bg);
 }
@@ -27,9 +27,6 @@
   z-index: 10;
 }
 
-/* remove or comment out any .app-container.swapped { transform: rotate... } */
-
-/* only rotate the intro-container when “swapped” is active */
 .intro-container {
   transition: transform 0.6s ease-in-out;
   transform-origin: center center;
@@ -39,7 +36,6 @@
   transform: rotate(180deg);
 }
 
-/* 2) Swap which half has which border */
 .app-container.swapped .intro-container .intro-half.left-half {
   border-right: none;
   border-left: 1px solid var(--border);
@@ -49,10 +45,9 @@
   border-right: 1px solid var(--border);
 }
 
-/* 3) On mobile, keep the vertical stacking but swap the divider line */
 @media (max-width: 768px) {
   .app-container.swapped .intro-container {
-    flex-direction: column; /* still stack */
+    flex-direction: column; 
   }
   .app-container.swapped .intro-container .intro-half.left-half {
     border-bottom: none;

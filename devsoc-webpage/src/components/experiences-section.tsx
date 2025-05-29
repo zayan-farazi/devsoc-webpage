@@ -31,7 +31,7 @@ const flippedData: Experience[] = [
     company: "FromSoftware",
     period: "2019 - Present",
     description:
-      "Genuinely, I haven't been able to get past the third boss, really questioned my will to live. Everytime I go to pick this game up, I remember my sanity and put it back down.",
+      "Genuinely, I haven't been able to get past the third boss, really questioned my will to live. Every time I go to pick this game up, I remember my sanity and put it back down.",
   },
   {
     title: "Genshin Impact",
@@ -44,8 +44,12 @@ const flippedData: Experience[] = [
 const ExperiencesSection: React.FC<{ swapped?: boolean }> = ({ swapped }) => {
   const data = swapped ? flippedData : normalData;
   const header = swapped
-    ? "Games I routined get demolished by"
+    ? "Games I routinely get demolished by"
     : "Games I've demolished";
+
+  const imageFiles = swapped
+    ? ["/photos/j.jpg", "/photos/download.jpg"]
+    : ["/photos/gow.jpg", "/photos/cod.jpg"];
 
   return (
     <section className="experiences-section">
@@ -65,7 +69,13 @@ const ExperiencesSection: React.FC<{ swapped?: boolean }> = ({ swapped }) => {
             <p className="experience-description">{exp.description}</p>
           </div>
           <div className="experience-image">
-            <div className="image-placeholder" />
+            <div className="image-placeholder">
+              <img
+                src={imageFiles[idx]}
+                alt={exp.title}
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </div>
           </div>
         </div>
       ))}

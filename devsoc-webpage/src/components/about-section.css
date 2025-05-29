@@ -119,7 +119,6 @@
   box-shadow: 0 4px 12px var(--accent1);
 }
 
-/* Upside down content (hidden by default) */
 .upside-down-content {
   display: none;
   position: absolute;
@@ -144,7 +143,6 @@
   float: left;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;
@@ -205,8 +203,8 @@
 
 .image-placeholder {
   position: relative;
-  width: 400px;   /* or whatever fixed size you’re using */
-  height: 300px;  /* keep whatever dimensions you need */
+  width: 400px;   
+  height: 300px;  
   overflow: hidden;
   border-radius: 12px;
 }
@@ -214,6 +212,6 @@
 .image-placeholder img {
   width: 100%;
   height: 100%;
-  object-fit: cover;    /* or `contain` if you prefer letterboxing */
-  display: block;       /* remove any inline whitespace */
+  object-fit: cover;
+  display: block;   
 }

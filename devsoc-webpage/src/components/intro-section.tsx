@@ -41,7 +41,6 @@ export default function IntroSection() {
         </div>
       </div>
 
-      {/* Right Half - Upside Down */}
       <div className="intro-half right-half">
         <div
           className="content upside-down"
@@ -63,7 +62,6 @@ export default function IntroSection() {
         </div>
       </div>
 
-      {/* Floating Elements */}
       <div className="floating-elements">
         <div className="floating-dot dot-1"></div>
         <div className="floating-dot dot-2"></div>
