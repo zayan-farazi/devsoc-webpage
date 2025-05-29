@@ -13,13 +13,15 @@ export default function App() {
   const handleSwap = () => setSwapped((f) => !f);
 
   return (
-    <div className={`app-container ${swapped ? " swapped" : ""}`}>
+    <>
       <SwapButton onFlip={handleSwap} Swapped={swapped}></SwapButton>
-      <IntroSection></IntroSection>
-      <AboutSection></AboutSection>
-      <SkillsSection></SkillsSection>
-      <ExperiencesSection></ExperiencesSection>
-      <ConnectSection></ConnectSection>
-    </div>
+      <div className={`app-container ${swapped ? " swapped" : ""}`}>
+        <IntroSection></IntroSection>
+        <AboutSection></AboutSection>
+        <SkillsSection></SkillsSection>
+        <ExperiencesSection></ExperiencesSection>
+        <ConnectSection></ConnectSection>
+      </div>
+    </>
   );
 }
