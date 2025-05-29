@@ -7,9 +7,19 @@
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
   overflow-x: hidden;
-  height: 200vh;
+  /* height: 200vh; */
   background: #1a1a1a;
 }
+
+/* App.css */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;            /* ← adjust this to tighten or loosen overall spacing */
+  /* optional global padding: */
+  padding: 2rem 1rem;
+}
+
 
 .app {
   min-height: 100vh;
@@ -20,7 +30,7 @@ body {
   width: 50%;
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   background: #1a1a1a;
 }
 
