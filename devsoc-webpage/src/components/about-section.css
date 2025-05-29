@@ -1,6 +1,7 @@
 .about-container {
   display: flex;
-  min-height: 100vh;
+  min-height: 50vh;
+  overflow: visible;
   position: relative;
   background: #1a1a1a;
 }
@@ -9,7 +10,7 @@
   width: 50%;
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   background: #1a1a1a;
 }
 
@@ -22,7 +23,7 @@
 }
 
 .content {
-  padding: 4rem 3rem;
+  padding: 2rem 3rem;
   height: 100%;
   display: flex;
   align-items: center;
