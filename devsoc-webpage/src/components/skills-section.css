@@ -1,0 +1,272 @@
+/* SkillsSection.css */
+
+.skills-container {
+  display: flex;
+  min-height: 50vh;
+  overflow: visible;
+  position: relative;
+  background: var(--bg);
+  margin-bottom: -4rem;
+  
+}
+
+.half {
+  width: 50%;
+  min-height: 100vh;
+  position: relative;
+  overflow: visible;
+  background: var(--bg);
+}
+
+.left-half {
+  border-right: 1px solid var(--border);
+}
+
+.right-half {
+  border-left: 1px solid var(--border);
+}
+
+.content {
+  padding: 2rem 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+.skills-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  gap: 1.5rem;
+  max-width: 500px;
+  width: 100%;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-header h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--fg);
+  margin: 0;
+}
+
+.skill-percentage {
+  font-size: 0.9rem;
+  color: var(--accent1);
+  font-weight: 600;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--accent1),
+    var(--accent2)
+  );
+  border-radius: 3px;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px var(--accent1);
+}
+
+.image-area {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder {
+  width: 400px;
+  height: 300px;
+  background: var(--avatar-bg);
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.image-placeholder:hover {
+  transform: scale(1.02);
+}
+
+.image-placeholder.inverted {
+  background: var(--avatar-inv-bg);
+  border: 2px solid var(--avatar-inv-border);
+}
+
+.monitor-icon {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--accent1);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg);
+  box-shadow: 0 4px 12px var(--accent1);
+}
+
+/* Upside down content (hidden by default) */
+.upside-down-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.upside-down {
+  transform: rotate(180deg);
+}
+
+.left-half-inverted,
+.right-half-inverted {
+  width: 50%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+  float: left;
+}
+
+.app-container.swapped .skills-container {
+  flex-direction: row-reverse;
+}
+
+/* 2) Swap which half has which border */
+.app-container.swapped .skills-container .left-half {
+  border-right: none;
+  border-left: 1px solid var(--border);
+}
+.app-container.swapped .skills-container .right-half {
+  border-left: none;
+  border-right: 1px solid var(--border);
+}
+
+/* 3) On mobile, keep the vertical stacking but swap the divider line */
+@media (max-width: 768px) {
+  .app-container.swapped .skills-container {
+    flex-direction: column; /* still stack */
+  }
+  .app-container.swapped .skills-container .left-half {
+    border-bottom: none;
+    border-top: 1px solid var(--border);
+  }
+  .app-container.swapped .skills-container .right-half {
+    border-top: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+  }
+
+  .half {
+    width: 100%;
+    min-height: 50vh;
+    border: none;
+  }
+
+  .left-half {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .right-half {
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .skill-header h3 {
+    font-size: 1rem;
+  }
+
+  .image-placeholder {
+    width: 300px;
+    height: 200px;
+  }
+
+  .content {
+    padding: 2rem 1rem;
+  }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .skill-progress {
+    animation: shimmer 2s infinite;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    box-shadow: 0 0 10px var(--accent1);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--accent1);
+  }
+  100% {
+    box-shadow: 0 0 10px var(--accent1);
+  }
+}
+
+.image-placeholder {
+  position: relative;
+  width: 400px;   
+  height: 300px;  
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    
+  display: block;       
+  top: -10%;
+}

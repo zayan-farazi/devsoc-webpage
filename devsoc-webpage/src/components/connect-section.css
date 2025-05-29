@@ -1,0 +1,142 @@
+/* ConnectSection.css */
+
+.connect-section {
+  padding: 3rem 1rem;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: visible;
+  gap: 2rem;
+}
+
+.connect-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--accent1);
+}
+
+.connect-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.connect-info {
+  flex: 1 1 320px;
+  display: flex;
+  justify-content: center;
+}
+
+.connect-card {
+  background: var(--border);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  color: var(--description-text);
+}
+
+.connect-card h3 {
+  margin-top: 0;
+  color: var(--fg);
+  font-size: 1.5rem;
+}
+
+.connect-card p {
+  margin: 1rem 0 1.5rem;
+  line-height: 1.6;
+  color: var(--description-text);
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.contact-list li {
+  margin-bottom: 0.75rem;
+}
+
+.contact-list a {
+  display: flex;
+  align-items: center;
+  color: var(--description-text);
+  text-decoration: none;
+}
+
+.contact-list a:hover .label {
+  color: var(--fg);
+}
+
+.contact-list .icon {
+  margin-right: 0.75rem;
+  color: var(--accent1);
+}
+
+.connect-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  padding: 0.65rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn.solid {
+  background: var(--accent1);
+  color: var(--fg);
+}
+.btn.solid:hover {
+  background: var(--accent2);
+}
+
+.btn.outline {
+  background: transparent;
+  color: var(--accent1);
+  border-color: var(--accent1);
+}
+.btn.outline:hover {
+  background-color: rgba(159, 90, 240, 0.1); 
+}
+
+.connect-image {
+  flex: 1 1 320px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-placeholder {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  background: var(--border);
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .connect-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .connect-card {
+    padding: 1.5rem;
+  }
+
+  .connect-actions {
+    justify-content: center;
+  }
+}

@@ -1,60 +1,43 @@
-import "./App.css";
-import { useRef, useState } from "react";
-import BottomHalf from "./components/BottomHalf";
+import { useState } from "react";
+import AboutSection from "./components/about-section";
+import ConnectSection from "./components/connect-section";
+import ExperiencesSection from "./components/experiences-section";
+import IntroSection from "./components/intro-section";
+import SkillsSection from "./components/skills-section";
 import SwapButton from "./components/SwapButton";
-import TopHalf from "./components/TopHalf";
-import TopHalfMessage from "./components/TopHalfMessage";
-import BottomHalfMessage from "./components/BottomHalfMessage";
+import Stars from "./components/stars";
+import "./index.css";
+import "./App.css";
 
-function App() {
-  // essentially, when button is clicked, the two halves should swap, thus re-rendering
-  let [isInverted, setIsInverted] = useState(false);
+export default function App() {
+  const [swapped, setSwapped] = useState(false);
+  const [fading, setFading] = useState(false);
 
-  // created a reference for the bottom half
-  const bottomRef = useRef<HTMLDivElement>(null);
+  const handleSwap = () => {
+    // start fade-out
+    setFading(true);
 
-  const handleMouseScroll = (e: React.WheelEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    if (bottomRef.current) {
-      bottomRef.current.scrollTop -= e.deltaY;
-    }
+    // after fade duration, toggle swap & fade back in
+    setTimeout(() => {
+      setSwapped((s) => !s);
+      setFading(false);
+    }, 400); // match this to the CSS transition time
   };
 
   return (
     <>
-      <div className={isInverted ? "inverted" : ""}>
-        <div className="container-fluid vh-100 d-flex flex-column p-0">
-          <div className="row g-0 flex-grow-1">
-            <div className="d-flex flex-column vh-100">
-              {/* this renders the page according to whether the page is flipped or not */}
-              {isInverted ? (
-                <>
-                  <BottomHalf ref={bottomRef} onWheel={handleMouseScroll}>
-                    <BottomHalfMessage></BottomHalfMessage>
-                  </BottomHalf>
-                  <TopHalf>
-                    <TopHalfMessage></TopHalfMessage>
-                  </TopHalf>
-                </>
-              ) : (
-                <>
-                  <TopHalf>
-                    <TopHalfMessage></TopHalfMessage>
-                  </TopHalf>
-                  <BottomHalf>
-                    <BottomHalfMessage></BottomHalfMessage>
-                  </BottomHalf>
-                </>
-              )}
-              <SwapButton onClick={() => setIsInverted((prev) => !prev)}>
-                {isInverted ? "Unflip & Uninvert" : "Flip & Invert"}
-              </SwapButton>
-            </div>
-          </div>
+      <Stars count={200} />
+      <SwapButton onFlip={handleSwap} Swapped={swapped} />
+      {/* wrapper that handles the fade */}
+      <div className={`app-wrapper${fading ? " fade-out" : ""}`}>
+        <div className={`app-container${swapped ? " swapped" : ""}`}>
+          <IntroSection />
+          <AboutSection swapped={swapped} />
+          <SkillsSection swapped={swapped} />
+          <ExperiencesSection swapped={swapped} />
+          <ConnectSection />
         </div>
       </div>
     </>
   );
 }
-
-export default App;

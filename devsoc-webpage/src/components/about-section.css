@@ -1,0 +1,217 @@
+/* AboutSection.css */
+
+.about-container {
+  display: flex;
+  min-height: 50vh;
+  overflow: visible;
+  position: relative;
+  background: var(--bg);
+}
+
+.half {
+  width: 50%;
+  min-height: 100vh;
+  position: relative;
+  overflow: visible;
+  background: var(--bg);
+}
+
+.left-half {
+  border-right: 1px solid var(--border);
+}
+
+.right-half {
+  border-left: 1px solid var(--border);
+}
+
+.content {
+  padding: 2rem 3rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+.about-content {
+  max-width: 500px;
+  color: var(--fg);
+}
+
+.story-section,
+.philosophy-section {
+  margin-bottom: 3rem;
+}
+
+.story-section h2,
+.philosophy-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.story-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--description-text);
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: var(--accent1);
+  font-weight: 500;
+}
+
+.philosophy-section blockquote {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--fg);
+  font-style: italic;
+  border-left: 3px solid var(--accent1);
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.image-area {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder {
+  width: 400px;
+  height: 300px;
+  background: var(--avatar-bg);
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.image-placeholder:hover {
+  transform: scale(1.02);
+}
+
+.image-placeholder.inverted {
+  background: var(--avatar-inv-bg);
+  border: 2px solid var(--avatar-inv-border);
+}
+
+.camera-icon {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--accent1);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg);
+  box-shadow: 0 4px 12px var(--accent1);
+}
+
+.upside-down-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.upside-down {
+  transform: rotate(180deg);
+}
+
+.left-half-inverted,
+.right-half-inverted {
+  width: 50%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+  float: left;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .half {
+    width: 100%;
+    min-height: 50vh;
+    border: none;
+  }
+
+  .left-half {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .right-half {
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+
+  .story-section h2,
+  .philosophy-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .story-section p {
+    font-size: 1rem;
+  }
+
+  .philosophy-section blockquote {
+    font-size: 1.1rem;
+  }
+
+  .image-placeholder {
+    width: 300px;
+    height: 200px;
+  }
+
+  .content {
+    padding: 2rem 1rem;
+  }
+}
+
+.app-container.swapped .about-container {
+  flex-direction: row-reverse;
+}
+
+/* 2) Swap which half has which border */
+.app-container.swapped .about-container .left-half {
+  border-right: none;
+  border-left: 1px solid var(--border);
+}
+.app-container.swapped .about-container .right-half {
+  border-left: none;
+  border-right: 1px solid var(--border);
+}
+
+.image-placeholder {
+  position: relative;
+  width: 400px;   
+  height: 300px;  
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;   
+}
