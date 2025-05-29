@@ -1,0 +1,20 @@
+.swap-button {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: #8b5cf6;
+  color: #fff;
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+  transition: transform 0.2s ease, background 0.2s ease;
+  z-index: 100;
+}
+
+.swap-button:hover {
+  transform: scale(1.05);
+  background: #a855f7;
+}

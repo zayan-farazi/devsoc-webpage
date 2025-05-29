@@ -1,21 +1,13 @@
-import type React from "react";
+import "./SwapButton.css";
 
-interface SwapButtonProps {
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
-  children: React.ReactNode;
+export interface SwapButtonProps {
+  onFlip: () => void;
 }
 
-function SwapButton({ onClick, children }: SwapButtonProps) {
+export default function SwapButton({ onFlip }: SwapButtonProps) {
   return (
-    <button
-      type="button"
-      className="btn btn-primary btn-lg"
-      // changed functionality to setup swapping halves when clicked.
-      onClick={onClick}
-    >
-      {children}
+    <button className="swap-button" onClick={onFlip}>
+      Click me & Switch it up!
     </button>
   );
 }
-
-export default SwapButton;

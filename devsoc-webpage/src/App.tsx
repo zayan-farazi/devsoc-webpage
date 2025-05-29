@@ -1,14 +1,20 @@
+import { useState } from "react";
 import "./App.css";
 import AboutSection from "./components/about-section";
 import ConnectSection from "./components/connect-section";
 import ExperiencesSection from "./components/experiences-section";
 import IntroSection from "./components/intro-section";
 import SkillsSection from "./components/skills-section";
+import SwapButton from "./components/SwapButton";
 import "./index.css";
 
 export default function App() {
+  const [swapped, setSwapped] = useState(false);
+  const handleSwap = () => setSwapped((f) => !f);
+
   return (
-    <div className="app-container">
+    <div className={`app-container ${swapped ? "swapped" : ""}`}>
+      <SwapButton onFlip={handleSwap}></SwapButton>
       <IntroSection></IntroSection>
       <AboutSection></AboutSection>
       <SkillsSection></SkillsSection>
