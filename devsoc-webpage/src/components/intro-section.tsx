@@ -16,7 +16,7 @@ export default function IntroSection() {
   return (
     <div className="intro-container">
       {/* Left Half - Normal */}
-      <div className="half left-half">
+      <div className="intro-half left-half">
         <div
           className="content"
           style={{ transform: `translateY(${scrollY * 0.1}px)` }}
@@ -43,7 +43,7 @@ export default function IntroSection() {
       </div>
 
       {/* Right Half - Upside Down */}
-      <div className="half right-half">
+      <div className="intro-half right-half">
         <div
           className="content upside-down"
           style={{
