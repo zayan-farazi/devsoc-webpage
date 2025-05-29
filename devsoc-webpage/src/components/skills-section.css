@@ -1,6 +1,7 @@
 .skills-container {
   display: flex;
   min-height: 50vh;
+  overflow: visible;
   position: relative;
   background: #1a1a1a;
   margin-bottom: -4rem;
@@ -10,7 +11,7 @@
   width: 50%;
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   background: #1a1a1a;
 }
 
