@@ -14,7 +14,7 @@ export default function App() {
 
   return (
     <div className={`app-container ${swapped ? "swapped" : ""}`}>
-      <SwapButton onFlip={handleSwap}></SwapButton>
+      <SwapButton onFlip={handleSwap} Swapped={swapped}></SwapButton>
       <IntroSection></IntroSection>
       <AboutSection></AboutSection>
       <SkillsSection></SkillsSection>

@@ -20,6 +20,10 @@ body {
   padding: 2rem 1rem;
 }
 
+.app-container.flipped {
+  transform: rotate(180deg);
+}
+
 
 .app {
   min-height: 100vh;

@@ -2,12 +2,13 @@ import "./SwapButton.css";
 
 export interface SwapButtonProps {
   onFlip: () => void;
+  Swapped: boolean;
 }
 
-export default function SwapButton({ onFlip }: SwapButtonProps) {
+export default function SwapButton({ onFlip, Swapped }: SwapButtonProps) {
   return (
     <button className="swap-button" onClick={onFlip}>
-      Click me & Switch it up!
+      {Swapped ? "Woah, what happened??" : "Click me & Switch it up!"}
     </button>
   );
 }
