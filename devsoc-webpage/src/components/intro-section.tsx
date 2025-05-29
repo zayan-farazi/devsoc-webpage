@@ -29,12 +29,12 @@ export default function IntroSection() {
               />
             </div>
             <div className="intro-text">
-              <h1>Hi, I'm</h1>
+              <h2>Hey there, I'm Zayan!</h2>
             </div>
             <div className="description">
               <p>
-                Full-stack developer, photographer, and reality bender who loves
-                creating immersive digital experiences
+                Part-time coder, full time sleeper, and a guy just interested in
+                figuring out the mysteries of front-end coding!
               </p>
             </div>
           </div>
@@ -51,13 +51,10 @@ export default function IntroSection() {
         >
           <div className="about-section">
             <div className="description">
-              <p>
-                secneirepxe latigid evisremmi gnitaerc sevol ohw redneb ytillaer
-                dna ,rehpargotohp ,repoleved kcats-lluF
-              </p>
+              <p>placeholder text for now!</p>
             </div>
             <div className="intro-text">
-              <h1>m'I ,iH</h1>
+              <h2>placeholder thank you.</h2>
             </div>
             <div className="profile-image">
               <div className="avatar-inverted"></div>
