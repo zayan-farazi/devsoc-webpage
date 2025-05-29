@@ -33,7 +33,7 @@ const ExperiencesSection: React.FC = () => {
           key={idx}
           className={`experience-row ${idx % 2 === 0 ? "left" : "right"}`}
         >
-          <div className="experience-card">
+          <div className="experience-card text-box">
             <h3 className="experience-title">{exp.title}</h3>
             <p className="experience-meta">
               {exp.company} • {exp.period}

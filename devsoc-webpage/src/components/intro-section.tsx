@@ -29,14 +29,19 @@ export default function IntroSection() {
                 className="avatar"
               />
             </div>
-            <div className="intro-text">
-              <h2>Hey there, I'm Zayan!</h2>
+            <div className="content text-box">
+              <div className="intro-text">
+                <h2>Hey there, I'm Zayan!</h2>
+              </div>
             </div>
-            <div className="description">
-              <p>
-                Part-time coder, full time sleeper, and a guy just interested in
-                figuring out the mysteries of front-end coding!
-              </p>
+
+            <div className="content text-box">
+              <div className="description">
+                <p>
+                  Part-time coder, full time sleeper, and a guy just interested
+                  in figuring out the mysteries of front-end coding!
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -7,6 +7,7 @@ import SkillsSection from "./components/skills-section";
 import SwapButton from "./components/SwapButton";
 import "./index.css";
 import "./App.css";
+import Stars from "./components/stars";
 
 export default function App() {
   const [swapped, setSwapped] = useState(false);
@@ -14,6 +15,7 @@ export default function App() {
 
   return (
     <>
+      <Stars count={200}></Stars>
       <SwapButton onFlip={handleSwap} Swapped={swapped}></SwapButton>
       <div className={`app-container ${swapped ? " swapped" : ""}`}>
         <IntroSection></IntroSection>

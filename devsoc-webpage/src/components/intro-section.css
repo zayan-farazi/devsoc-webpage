@@ -1,33 +1,32 @@
-/* 1) Container: full-height flex row */
+/* IntroSection.css */
+
 .intro-container {
   display: flex;
   min-height: 100vh;              /* fill viewport */
   margin-bottom: 2rem;
 }
 
-/* 2) Each half: flex 1, center its content */
 .intro-container .intro-half {
   flex: 1;                        /* take up half the width */
   display: flex;
   align-items: center;            /* vertical center */
   justify-content: center;        /* horizontal center */
   padding: 2rem 3rem;
-  background: #1a1a1a;
+  background: var(--bg);
 }
 
-/* 3) Divider line in the middle */
-.intro-container .intro-half.left-half  { border-right: 1px solid #333; }
-.intro-container .intro-half.right-half { border-left:  1px solid #333; }
+.intro-container .intro-half.left-half  {
+  border-right: 1px solid var(--border);
+}
 
-/* 4) Your content box can now size to its children naturally */
+.intro-container .intro-half.right-half {
+  border-left: 1px solid var(--border);
+}
+
 .intro-container .content {
-  /* you can drop the height overrides entirely */
   z-index: 10;
 }
 
-/* — your existing inner styles (avatars, text, etc.) can stay exactly the same — */
-
-/* 5) Mobile: stack, keep divider as horizontal line */
 @media (max-width: 768px) {
   .intro-container {
     flex-direction: column;
@@ -38,9 +37,9 @@
     width: 100%;
   }
   .intro-container .intro-half.left-half {
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--border);
   }
   .intro-container .intro-half.right-half {
-    border-top: 1px solid #333;
+    border-top: 1px solid var(--border);
   }
 }

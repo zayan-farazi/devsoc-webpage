@@ -1,7 +1,8 @@
-/* Section wrapper */
+/* ConnectSection.css */
+
 .connect-section {
   padding: 3rem 1rem;
-  background: #111;
+  background: var(--bg);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -12,50 +13,44 @@
 .connect-title {
   text-align: center;
   font-size: 2rem;
-  color: #a855f7;
+  color: var(--accent1);
 }
 
-/* Layout row */
 .connect-row {
   display: grid;
-  /* always two columns of at least 300px, up to 1fr each */
   grid-template-columns: repeat(2, minmax(300px, 1fr));
   gap: 2rem;
   max-width: 900px;
   margin: 0 auto;
 }
 
-
-/* Left side: Info card */
 .connect-info {
   flex: 1 1 320px;
   display: flex;
   justify-content: center;
 }
 
-
 .connect-card {
-  background: #1a1a1a;
+  background: var(--border);
   padding: 2rem;
   border-radius: 8px;
   max-width: 400px;
   width: 100%;
-  color: #ddd;
+  color: var(--description-text);
 }
 
 .connect-card h3 {
   margin-top: 0;
-  color: #fff;
+  color: var(--fg);
   font-size: 1.5rem;
 }
 
 .connect-card p {
   margin: 1rem 0 1.5rem;
   line-height: 1.6;
-  color: #ccc;
+  color: var(--description-text);
 }
 
-/* Contact list */
 .contact-list {
   list-style: none;
   padding: 0;
@@ -69,20 +64,19 @@
 .contact-list a {
   display: flex;
   align-items: center;
-  color: #ccc;
+  color: var(--description-text);
   text-decoration: none;
 }
 
 .contact-list a:hover .label {
-  color: #fff;
+  color: var(--fg);
 }
 
 .contact-list .icon {
   margin-right: 0.75rem;
-  color: #8b5cf6;
+  color: var(--accent1);
 }
 
-/* Action buttons */
 .connect-actions {
   display: flex;
   flex-wrap: wrap;
@@ -102,23 +96,22 @@
 }
 
 .btn.solid {
-  background: #8b5cf6;
-  color: #fff;
+  background: var(--accent1);
+  color: var(--fg);
 }
 .btn.solid:hover {
-  background: #a855f7;
+  background: var(--accent2);
 }
 
 .btn.outline {
   background: transparent;
-  color: #8b5cf6;
-  border-color: #8b5cf6;
+  color: var(--accent1);
+  border-color: var(--accent1);
 }
 .btn.outline:hover {
-  background: rgba(139, 92, 246, 0.1);
+  background-color: rgba(159, 90, 240, 0.1); /* accent1 at 10% */
 }
 
-/* Right side: Placeholder */
 .connect-image {
   flex: 1 1 320px;
   display: flex;
@@ -129,13 +122,13 @@
   width: 100%;
   max-width: 400px;
   height: 250px;
-  background: #222;
+  background: var(--border);
   border-radius: 8px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .connect-row {
+    display: flex;
     flex-direction: column;
   }
 

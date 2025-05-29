@@ -23,7 +23,7 @@ export default function AboutSection() {
           style={{ transform: `translateY(${scrollY * 0.05}px)` }}
         >
           <div className="about-content">
-            <div className="story-section">
+            <div className="story-section text-box">
               <h2>My Story</h2>
               <p>
                 <span className="highlight">
@@ -40,7 +40,7 @@ export default function AboutSection() {
               </p>
             </div>
 
-            <div className="philosophy-section">
+            <div className="philosophy-section text-box">
               <h2>Philosophy</h2>
               <blockquote>
                 "And those who were seen dancing were thought to be insane by

@@ -55,7 +55,7 @@ const SkillsSection = () => {
             <h3>My Skills & Talents!</h3>
             <div className="skills-grid">
               {normalSkills.map((skill, index) => (
-                <div key={skill.skill} className="skill-item">
+                <div key={skill.skill} className="skill-item text-box">
                   <div className="skill-header">
                     <h3>{skill.skill}</h3>
                     <span className="skill-percentage">{skill.level}%</span>
