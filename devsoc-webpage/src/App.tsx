@@ -9,9 +9,9 @@ import "./index.css";
 export default function App() {
   return (
     <div className="app-container">
-      <SkillsSection></SkillsSection>
       <IntroSection></IntroSection>
       <AboutSection></AboutSection>
+      <SkillsSection></SkillsSection>
       <ExperiencesSection></ExperiencesSection>
       <ConnectSection></ConnectSection>
     </div>
