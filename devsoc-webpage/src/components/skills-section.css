@@ -7,6 +7,7 @@
   position: relative;
   background: var(--bg);
   margin-bottom: -4rem;
+  
 }
 
 .half {
@@ -26,7 +27,7 @@
 }
 
 .content {
-  padding: 2rem 3rem;
+  padding: 2rem 1.5rem;
   height: 100%;
   display: flex;
   align-items: center;
@@ -163,6 +164,35 @@
   overflow: hidden;
   background: var(--bg);
   float: left;
+}
+
+.app-container.swapped .skills-container {
+  flex-direction: row-reverse;
+}
+
+/* 2) Swap which half has which border */
+.app-container.swapped .skills-container .left-half {
+  border-right: none;
+  border-left: 1px solid var(--border);
+}
+.app-container.swapped .skills-container .right-half {
+  border-left: none;
+  border-right: 1px solid var(--border);
+}
+
+/* 3) On mobile, keep the vertical stacking but swap the divider line */
+@media (max-width: 768px) {
+  .app-container.swapped .skills-container {
+    flex-direction: column; /* still stack */
+  }
+  .app-container.swapped .skills-container .left-half {
+    border-bottom: none;
+    border-top: 1px solid var(--border);
+  }
+  .app-container.swapped .skills-container .right-half {
+    border-top: none;
+    border-bottom: 1px solid var(--border);
+  }
 }
 
 /* Responsive Design */

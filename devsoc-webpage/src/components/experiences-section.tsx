@@ -8,26 +8,50 @@ export interface Experience {
   description: string;
 }
 
-const data: Experience[] = [
+const normalData: Experience[] = [
   {
-    title: "Senior Full-Stack Developer",
-    company: "TechCorp Solutions",
-    period: "2022 – Present",
+    title: "God of War/God of War Ragnarok",
+    company: "Sony Interactive Entertainment",
+    period: "2018 – 2022",
     description:
-      "Leading development of innovative web applications using React, Next.js, and Node.js. Mentoring junior developers and implementing best practices.",
+      "Fully 100% the story, achievements and collectibles on NG+, got the platinum as well.",
   },
   {
-    title: "Frontend Developer",
-    company: "Creative Digital Agency",
-    period: "2020 – 2022",
+    title: "Call of Duty",
+    company: "Treyarch, Sledgehammer Games, Activision",
+    period: "2012 – Present",
     description:
-      "Developed responsive websites and interactive experiences for high-profile clients. Specialized in modern JavaScript frameworks and creative animations.",
+      "I make it my mission to complete the campaign on the hardest difficulty every year and don't get me started on the multiplayer.",
   },
 ];
 
-const ExperiencesSection: React.FC = () => {
+const flippedData: Experience[] = [
+  {
+    title: "Sekiro: Shadows Die Twice",
+    company: "FromSoftware",
+    period: "2019 - Present",
+    description:
+      "Genuinely, I haven't been able to get past the third boss, really questioned my will to live. Everytime I go to pick this game up, I remember my sanity and put it back down.",
+  },
+  {
+    title: "Genshin Impact",
+    company: "miHoYo",
+    period: "2020 - Present",
+    description: "Nothing needs to be said, I've lost too many 50/50's.",
+  },
+];
+
+const ExperiencesSection: React.FC<{ swapped?: boolean }> = ({ swapped }) => {
+  const data = swapped ? flippedData : normalData;
+  const header = swapped
+    ? "Games I routined get demolished by"
+    : "Games I've demolished";
+
   return (
     <section className="experiences-section">
+      <div className="section-title text-box">
+        <h3>{header}</h3>
+      </div>
       {data.map((exp, idx) => (
         <div
           key={idx}

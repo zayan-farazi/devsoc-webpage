@@ -75,3 +75,36 @@
     height: 250px;
   }
 }
+
+.section-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.section-title h3 {
+  margin: 0;
+  text-align: center;
+}
+
+/* ensure .text-box utility is defined if not already */
+.text-box {
+  background: var(--text-box-bg, rgba(255,255,255,0.08));
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+}
+
+/* when it’s also a text-box, make it inline-block so it only grows to fit its contents */
+.section-title.text-box {
+  display: inline-block;
+  padding: 0.5rem 1rem;       /* tweak to taste */
+  background: var(--text-box-bg, rgba(255,255,255,0.08));
+  border-radius: 6px;
+  backdrop-filter: blur(4px); /* optional */
+}
+
+/* ensure the <h3> inside isn’t forcing full width */
+.section-title.text-box h3 {
+  margin: 0;
+  white-space: nowrap;        /* prevents line‐wrap if you want a single line */
+}

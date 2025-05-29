@@ -27,6 +27,43 @@
   z-index: 10;
 }
 
+/* remove or comment out any .app-container.swapped { transform: rotate... } */
+
+/* only rotate the intro-container when “swapped” is active */
+.intro-container {
+  transition: transform 0.6s ease-in-out;
+  transform-origin: center center;
+}
+
+.app-container.swapped .intro-container {
+  transform: rotate(180deg);
+}
+
+/* 2) Swap which half has which border */
+.app-container.swapped .intro-container .intro-half.left-half {
+  border-right: none;
+  border-left: 1px solid var(--border);
+}
+.app-container.swapped .intro-container .intro-half.right-half {
+  border-left: none;
+  border-right: 1px solid var(--border);
+}
+
+/* 3) On mobile, keep the vertical stacking but swap the divider line */
+@media (max-width: 768px) {
+  .app-container.swapped .intro-container {
+    flex-direction: column; /* still stack */
+  }
+  .app-container.swapped .intro-container .intro-half.left-half {
+    border-bottom: none;
+    border-top: 1px solid var(--border);
+  }
+  .app-container.swapped .intro-container .intro-half.right-half {
+    border-top: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
 @media (max-width: 768px) {
   .intro-container {
     flex-direction: column;

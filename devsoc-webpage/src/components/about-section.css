@@ -188,3 +188,17 @@
     padding: 2rem 1rem;
   }
 }
+
+.app-container.swapped .about-container {
+  flex-direction: row-reverse;
+}
+
+/* 2) Swap which half has which border */
+.app-container.swapped .about-container .left-half {
+  border-right: none;
+  border-left: 1px solid var(--border);
+}
+.app-container.swapped .about-container .right-half {
+  border-left: none;
+  border-right: 1px solid var(--border);
+}

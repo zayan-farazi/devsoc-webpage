@@ -34,17 +34,18 @@ const contactLinks: ContactLink[] = [
 export default function ConnectSection() {
   return (
     <section className="connect-section">
-      <h2 className="connect-title">Let's Connect</h2>
+      <h2 className="connect-title">The End...?</h2>
 
       <div className="connect-row">
         {/* Left: Info Card */}
         <div className="connect-info">
           <div className="connect-card">
-            <h3>Get In Touch</h3>
+            <h3>Take me as a trainee please 🙏🏾</h3>
             <p>
-              Ready to collaborate on something amazing? Whether it’s a
-              development project, photography session, or just a chat about
-              flipping reality, I’d love to hear from you!
+              Genuinely, this was such a pain to come up with no experience
+              whatsoever, that being said even if this application is
+              unsuccessful, thank you for the opportunity to get me to out of my
+              comfort zone and try a front-end project (even if it's small).
             </p>
 
             <ul className="contact-list">

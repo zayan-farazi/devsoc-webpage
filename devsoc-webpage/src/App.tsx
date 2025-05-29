@@ -5,24 +5,38 @@ import ExperiencesSection from "./components/experiences-section";
 import IntroSection from "./components/intro-section";
 import SkillsSection from "./components/skills-section";
 import SwapButton from "./components/SwapButton";
+import Stars from "./components/stars";
 import "./index.css";
 import "./App.css";
-import Stars from "./components/stars";
 
 export default function App() {
   const [swapped, setSwapped] = useState(false);
-  const handleSwap = () => setSwapped((f) => !f);
+  const [fading, setFading] = useState(false);
+
+  const handleSwap = () => {
+    // start fade-out
+    setFading(true);
+
+    // after fade duration, toggle swap & fade back in
+    setTimeout(() => {
+      setSwapped((s) => !s);
+      setFading(false);
+    }, 400); // match this to the CSS transition time
+  };
 
   return (
     <>
-      <Stars count={200}></Stars>
-      <SwapButton onFlip={handleSwap} Swapped={swapped}></SwapButton>
-      <div className={`app-container ${swapped ? " swapped" : ""}`}>
-        <IntroSection></IntroSection>
-        <AboutSection></AboutSection>
-        <SkillsSection></SkillsSection>
-        <ExperiencesSection></ExperiencesSection>
-        <ConnectSection></ConnectSection>
+      <Stars count={200} />
+      <SwapButton onFlip={handleSwap} Swapped={swapped} />
+      {/* wrapper that handles the fade */}
+      <div className={`app-wrapper${fading ? " fade-out" : ""}`}>
+        <div className={`app-container${swapped ? " swapped" : ""}`}>
+          <IntroSection />
+          <AboutSection swapped={swapped} />
+          <SkillsSection swapped={swapped} />
+          <ExperiencesSection swapped={swapped} />
+          <ConnectSection />
+        </div>
       </div>
     </>
   );

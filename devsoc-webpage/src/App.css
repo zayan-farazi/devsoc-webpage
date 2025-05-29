@@ -47,8 +47,6 @@ body {
 
 /* 5) Flipped/swapped state: rotate + override palette */
 .app-container.swapped {
-  transform: rotate(180deg);
-
   /* New palette on click */
   --bg:       #1f2937;   /* dark slate-blue background */
   --fg:       #f59e0b;   /* amber/orange for headings & highlights */
@@ -60,6 +58,19 @@ body {
   --accent2:  #fbbf24;   /* soft gold for small accents */
 }
 
+.app-container.swapped .two-col {
+  display: flex;           /* ensure it’s flex */
+  flex-direction: row-reverse;
+}
+
+/* swap grid-based experience rows */
+.app-container.swapped .experience-row {
+  /* we cheat via text direction */
+  direction: rtl;
+}
+.app-container.swapped .experience-row > * {
+  direction: ltr;
+}
 /* 6) Full-screen sections */
 .app {
   min-height: 100vh;
@@ -219,3 +230,16 @@ html {
     font-size: 1rem;
   }
 }
+
+/* fade wrapper around the whole app-container */
+.app-wrapper {
+  transition: opacity 0.4s ease-in-out;
+  opacity: 1;
+}
+
+.app-wrapper.fade-out {
+  opacity: 0;
+}
+
+/* your existing .app-container.swapped stays the same,
+   only palette/layout overrides there */
