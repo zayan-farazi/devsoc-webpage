@@ -1,6 +1,7 @@
 import "./App.css";
 import AboutSection from "./components/about-section";
 import IntroSection from "./components/intro-section";
+import SkillsSection from "./components/skills-section";
 import "./index.css";
 
 export default function App() {
@@ -8,6 +9,7 @@ export default function App() {
     <>
       <IntroSection></IntroSection>
       <AboutSection></AboutSection>
+      <SkillsSection></SkillsSection>
     </>
   );
 }
