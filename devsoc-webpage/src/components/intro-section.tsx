@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./intro-section.css";
 
 export default function IntroSection() {
   const [scrollY, setScrollY] = useState(0);
@@ -13,7 +14,7 @@ export default function IntroSection() {
   }, []);
 
   return (
-    <div className="app">
+    <div className="intro-container">
       {/* Left Half - Normal */}
       <div className="half left-half">
         <div

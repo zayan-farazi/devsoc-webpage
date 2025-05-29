@@ -1,5 +1,6 @@
 import { Camera } from "lucide-react";
 import { useEffect, useState } from "react";
+import "./about-section.css";
 
 export default function AboutSection() {
   const [scrollY, setScrollY] = useState(0);
