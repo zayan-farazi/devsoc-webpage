@@ -18,9 +18,10 @@ body {
   gap: 4rem;            /* ← adjust this to tighten or loosen overall spacing */
   /* optional global padding: */
   padding: 2rem 1rem;
+  transition: transform 0.6s ease-in-out;
 }
 
-.app-container.flipped {
+.app-container.swapped {
   transform: rotate(180deg);
 }
 
