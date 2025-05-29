@@ -1,7 +1,9 @@
 .swap-button {
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
+  top: 1rem;                   
+  left: 50%;                   
+  transform: translateX(-50%); 
+  z-index: 100;                
   background: #8b5cf6;
   color: #fff;
   border: none;
@@ -18,3 +20,4 @@
   transform: scale(1.05);
   background: #a855f7;
 }
+
