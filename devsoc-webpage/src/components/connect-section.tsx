@@ -32,6 +32,8 @@ const contactLinks: ContactLink[] = [
 ];
 
 export default function ConnectSection() {
+  const base = import.meta.env.BASE_URL;
+
   return (
     <section className="connect-section">
       <h2 className="connect-title">The End...?</h2>
@@ -63,7 +65,7 @@ export default function ConnectSection() {
         <div className="connect-image">
           <div className="image-placeholder">
             <img
-              src="/photos/eepy.jpeg"
+              src={`${base}photos/eepy.jpeg`}
               alt="more cat"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />

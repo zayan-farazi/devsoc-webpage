@@ -7,6 +7,11 @@ interface AboutSectionProps {
 }
 
 export default function AboutSection({ swapped }: AboutSectionProps) {
+  const base = import.meta.env.BASE_URL;
+  const imageSrc = swapped
+    ? `${base}photos/sleep.jpeg`
+    : `${base}photos/IMG_2231%20(1).jpeg`;
+
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -84,12 +89,7 @@ export default function AboutSection({ swapped }: AboutSectionProps) {
         >
           <div className="image-area">
             <div className="image-placeholder">
-              <img
-                src={
-                  swapped ? "/photos/sleep.jpeg" : "/photos/IMG_2231%20(1).jpeg"
-                }
-                alt="Selfies"
-              />
+              <img src={imageSrc}></img>
               <div className="camera-icon">
                 <Camera size={24} />
               </div>

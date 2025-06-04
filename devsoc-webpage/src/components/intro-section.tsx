@@ -16,7 +16,6 @@ export default function IntroSection() {
   return (
     <div className="intro-container">
       <div className="flip-card"></div>
-      {/* Left Half - Normal */}
       <div className="intro-half left-half">
         <div
           className="content"
@@ -54,9 +53,6 @@ export default function IntroSection() {
             </div>
             <div className="intro-text">
               <h2>Want to read what this says?</h2>
-            </div>
-            <div className="profile-image">
-              <div className="avatar-inverted"></div>
             </div>
           </div>
         </div>

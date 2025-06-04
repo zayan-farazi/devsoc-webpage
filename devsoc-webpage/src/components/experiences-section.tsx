@@ -42,14 +42,16 @@ const flippedData: Experience[] = [
 ];
 
 const ExperiencesSection: React.FC<{ swapped?: boolean }> = ({ swapped }) => {
+  const base = import.meta.env.BASE_URL;
+
+  const imageFiles = swapped
+    ? [`${base}photos/j.jpg`, `${base}photos/download.jpg`]
+    : [`${base}photos/gow.jpg`, `${base}photos/cod.jpg`];
+
   const data = swapped ? flippedData : normalData;
   const header = swapped
     ? "Games I routinely get demolished by"
     : "Games I've demolished";
-
-  const imageFiles = swapped
-    ? ["/photos/j.jpg", "/photos/download.jpg"]
-    : ["/photos/gow.jpg", "/photos/cod.jpg"];
 
   return (
     <section className="experiences-section">

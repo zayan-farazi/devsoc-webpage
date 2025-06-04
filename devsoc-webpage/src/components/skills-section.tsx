@@ -7,6 +7,12 @@ interface SkillsSectionProps {
 }
 
 const SkillsSection = ({ swapped }: SkillsSectionProps) => {
+  const base = import.meta.env.BASE_URL;
+
+  const imageFiles = swapped
+    ? `${base}photos/catmad.jpeg`
+    : `${base}photos/catselfie.jpeg`;
+
   const [scrollY, setScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -82,10 +88,7 @@ const SkillsSection = ({ swapped }: SkillsSectionProps) => {
         >
           <div className="image-area">
             <div className="image-placeholder">
-              <img
-                src={swapped ? "/photos/catmad.jpeg" : "/photos/catselfie.jpeg"}
-                alt="Skills placeholder"
-              />
+              <img src={imageFiles} alt="Skills placeholder" />
               <div className="monitor-icon">
                 <Monitor size={24} />
               </div>
